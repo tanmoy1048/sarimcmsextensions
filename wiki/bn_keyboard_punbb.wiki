@@ -1,4 +1,4 @@
-#summary This extension will add various bangla web writing layout for your forum
+#summary This extension will add various bangla web writing layout for your PunBB forum
 
 = Overview =
 
