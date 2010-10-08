@@ -20,9 +20,9 @@ Writing Bangla is now getting easier and easier. And now, with web keyboards wri
  # *Download the following file. <a href="http://code.google.com/p/sarimcmsextensions/wiki/bn_keyboard_punbb"> bn_keyboard.tar</a>*           
  # *Extract the file.*
  # *Upload the bn_keyboard folder to your punbb installation's /extensions/ folder.*
- # *In punbb Goto _admin_ > _extensions_ 
+ # *In punbb Goto _admin_ > _extensions_* 
  # *You will find _bn_keyboard_ available in _Extensions available for install_ section*
- # *Click _Install Extension_ and again in next page click _Install Extension_ again.
+ # *Click _Install Extension_ and again in next page click _Install Extension_ again.*
 
 == Congrats!!! You have successfully installed bangla keyboard to your website ==
  
