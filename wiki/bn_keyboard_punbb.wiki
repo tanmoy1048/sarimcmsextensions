@@ -17,7 +17,7 @@ Writing Bangla is now getting easier and easier. And now, with web keyboards wri
       Phonetic bangla layout created by Hasin Haydar
 
 = How to install =
- # *Download the following file.*           
+ # *Download the following file. <a href="http://code.google.com/p/sarimcmsextensions/wiki/bn_keyboard_punbb"> bn_keyboard.tar</a>*           
  # *Extract the file.*
  # *Upload the bn_keyboard folder to your punbb installation's /extensions/ folder.*
  # *In punbb Goto _admin_ > _extensions_ 
