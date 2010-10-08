@@ -1,0 +1,18 @@
+#summary Bangla Web Keyboard for any site or cms
+
+= Introduction =
+
+This script will add bangla writing system to your website.
+
+
+= How to install =
+
+ # *Edit your webpage's `<head>` section, and add the following two lines,
+{{{
+<script type="text/javascript" src="http://sarimcmsextensions.googlecode.com/files/key.js"></script>
+<link rel="stylesheet" type="text/css" media="screen" href="http://sarimcmsextensions.googlecode.com/files/styles.css" />
+}}}
+ # * Now add the following line after `</body>` tag or after all text elements,
+{{{
+<script type="text/javascript" src="http://sarimcmsextensions.googlecode.com/files/preload.js"></script>
+}}}
