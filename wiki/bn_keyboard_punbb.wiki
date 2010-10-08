@@ -1,0 +1,34 @@
+#summary This extension will add various bangla web writing layout for your forum
+
+= Overview =
+
+Writing Bangla is now getting easier and easier. And now, with web keyboards writing bangla is more easier. This Extension adds a keyboard bar in the bottom of webpage. 
+
+= Supported Layouts =
+
+  * *Bijoy*
+      Traditional Bijoy layout in unicode format.
+  * *Unijoy*
+      Unijoy layout created by Ekeshey
+  * *Probhat*
+      Probhat layout created by Ekeshey
+
+  * *Phonetic*
+      Phonetic bangla layout created by Hasin Haydar
+
+= How to install =
+ # *Download the following file.*           
+ # *Extract the file.*
+ # *Upload the bn_keyboard folder to your punbb installation's /extensions/ folder.*
+ # *In punbb Goto _admin_ > _extensions_ 
+ # *You will find _bn_keyboard_ available in _Extensions available for install_ section
+ # *Click _Install Extension_ and again in next page click _Install Extension_ again.
+
+== Congrats!!! You have successfully installed bangla keyboard to your website ==
+ 
+=How to use=
+ # *Click the _"কিবোর্ডঃ"_ section in the keyboard bar in the bottom of the page. *
+ # *Now click on your favorite bangla layout and start writing bangla*
+
+
+=THANKS FOR READING and GOOD LUCK=
