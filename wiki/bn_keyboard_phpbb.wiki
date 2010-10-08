@@ -1,0 +1,28 @@
+#summary This mod will add various bangla web writing keyboard layout to your PHPBB3 forum
+
+= Overview =
+
+Writing Bangla is now getting easier and easier. And now, with web keyboards writing bangla is more easier. This mod adds a keyboard bar in the bottom of webpage. 
+
+= Supported Layouts =
+
+  * *Bijoy*
+      Traditional Bijoy layout in unicode format.
+  * *Unijoy*
+      Unijoy layout created by Ekeshey
+  * *Probhat*
+      Probhat layout created by Ekeshey
+
+  * *Phonetic*
+      Phonetic bangla layout created by Hasin Haydar
+
+= How to install =
+=== To install this mod you will need to edit the template of your style/theme. ===
+For Example here i demonstrate *_
+ #
+= Details =
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
