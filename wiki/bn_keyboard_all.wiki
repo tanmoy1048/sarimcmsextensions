@@ -4,15 +4,36 @@
 
 This script will add bangla writing system to your website.
 
+= Supported Layouts =
+
+  * *Bijoy*
+      Traditional Bijoy layout in unicode format.
+  * *Unijoy*
+      Unijoy layout created by Ekeshey
+  * *Probhat*
+      Probhat layout created by Ekeshey
+
+  * *Phonetic*
+      Phonetic bangla layout created by Hasin Haydar
 
 = How to install =
 
- # *Edit your webpage's `<head>` section, and add the following two lines,
+ # *Edit your webpage's `<head>` section, and add the following two lines,*
 {{{
 <script type="text/javascript" src="http://sarimcmsextensions.googlecode.com/files/key.js"></script>
 <link rel="stylesheet" type="text/css" media="screen" href="http://sarimcmsextensions.googlecode.com/files/styles.css" />
 }}}
- # * Now add the following line after `</body>` tag or after all text elements,
+ # * Now add the following line after `</body>` tag or after all text elements,*
 {{{
 <script type="text/javascript" src="http://sarimcmsextensions.googlecode.com/files/preload.js"></script>
 }}}
+
+== Congrats!!! You have successfully installed bangla keyboard to your website ==
+ 
+=How to use=
+ # *Click the _"কিবোর্ডঃ"_ section in the keyboard bar in the bottom of the page. *
+ # *Now click on your favorite bangla layout and start writing bangla*
+
+
+=THANKS FOR READING and GOOD LUCK=
+=== Dont forget to comment for any query or suggestion ===
