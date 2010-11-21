@@ -19,6 +19,8 @@ function KeyCheckUp(e){
 	document.Form1.KeyName3.value = "";
    switch(KeyID){
       case 17:
+      case 224:
+      case 91:
       cntrlp = false;
       
       break;
@@ -33,6 +35,8 @@ function KeyCheckUp(e){
 function KeyCheckDown(e){
    var KeyID = (window.event) ? event.keyCode : e.keyCode;
    switch(KeyID){
+      case 224:
+      case 91:
       case 17:
       cntrlp = true;
       
