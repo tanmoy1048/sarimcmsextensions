@@ -16,4 +16,4 @@ Click your desired layout and start writing.
  
 
 == Thanks To,==
- * <a href="hasin.wordpress.com/2010/11/10/bangla-input-script-as-jquery-plugin">Hasin Hayder</a> for the jquery input engine.
+ <a href="hasin.wordpress.com/2010/11/10/bangla-input-script-as-jquery-plugin">Hasin Hayder</a> for the jquery input engine.
