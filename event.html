@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+	<title>JS key press</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta name="generator" content="Geany 0.19.1" />
+
+
+<script type="text/javascript">
+var cntrlp = false;	
+var altp = false;
+document.onkeyup = KeyCheckUp;
+document.onkeydown = KeyCheckDown;       
+
+function KeyCheckUp(e){
+   var KeyID = (window.event) ? event.keyCode : e.keyCode;
+	document.Form1.KeyName3.value = "";
+   switch(KeyID){
+      case 17:
+      cntrlp = false;
+      
+      break;
+
+      case 18:
+      altp = false;
+      
+      break;
+   }
+}
+
+function KeyCheckDown(e){
+   var KeyID = (window.event) ? event.keyCode : e.keyCode;
+   switch(KeyID){
+      case 17:
+      cntrlp = true;
+      
+      break;
+
+      case 18:
+      altp = true;
+      
+      break;
+   }
+   keyvale = String.fromCharCode(KeyID);
+ document.Form1.KeyName3.value = "";
+   if (cntrlp && altp && KeyID != 17 && KeyID != 18)
+ document.Form1.KeyName3.value = "Cntrl + Alt + " +  keyvale + " pressed";
+ 
+}
+</script>
+</head>
+<body>
+<form name="Form1">
+Keys Will be shown here when pressed with cntrl + alt together. <br />
+<input type="text" name="KeyName3" value=""><br />
+</form>
+<br>
+Press the Cntrl + Alt + Any keys on your keyboard.
+
+
+
+</body></html>
