@@ -11,3 +11,6 @@ Click this icon and you will be provided with a Layout Selection Window.
 Click your desired layout and start writing.
 
 = Download =
+
+ <a href="http://sarimcmsextensions.googlecode.com/files/bnkeychrome.crx"> *Click Here To Install* </a>
+ 
