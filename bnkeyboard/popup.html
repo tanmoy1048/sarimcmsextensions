@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+	<title>Bangla Keyboard</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta name="generator" content="Geany 0.19.1" />
+<style>
+body {
+  overflow: hidden;
+  margin: 0px;
+  padding: 0px;
+  background: transparent;
+  -webkit-transition: -webkit-transform 0ms ease-in;
+}
+
+div:first-child {
+  margin-top: 0px;
+}
+
+.parnt {
+  cursor: pointer;
+  text-align: center;
+  padding: 1px 3px;
+  font-family: sans-serif;
+  font-size: 18px;
+  width: 100px;
+  margin-top: 1px;
+  background: #cccccc;
+  border: 2px solid blue;
+  -webkit-border-radius: 30px;
+  color: black;
+-webkit-transition-property: all;
+-webkit-transition-duration: 50ms;
+-webkit-transition-timing-function: ease-in-out;
+-webkit-transition-delay: initial;
+
+}
+.parnt:hover {
+  background: #aaaaaa;
+  
+}
+.icon:hover {
+	
+	-webkit-transform: rotate(360deg);
+    -webkit-transition: all 1s ease-out;
+    }
+.icon {
+	float:left;
+	display:inline;
+	
+	}
+.laytext {
+	display:inline;
+	}
+.laytext:hover {
+	-webkit-transform: rotate(180deg);
+    -webkit-transition: all 1s ease-out;
+	}
+
+</style>
+<script>
+function click(color) {   
+  if (color.id == "eng"){
+	  
+	  chrome.tabs.executeScript(null,{code: "$.fn.toggle(\"e\")"});
+	  
+	  }	  
+	else {  
+   
+  chrome.tabs.executeScript(null,{code: "if (itemss = document.getElementsByTagName(\"textarea\")){ for (i=0;i<itemss.length;i++){ itemss[i].setAttribute(\"class\", (itemss[i].getAttribute(\"class\") + \" bnkeysarim\").trim())}}if (itemss = document.getElementsByTagName(\"input\")){ for (i=0;i<itemss.length;i++){ itemss[i].setAttribute(\"class\", (itemss[i].getAttribute(\"class\") + \" bnkeysarim\").trim())}}"});
+  chrome.tabs.executeScript(null,{code: "$(\".bnkeysarim\").bnKb({'switchkey': 'y','driver': " + color.id + "});"});
+  }
+  chrome.browserAction.setIcon({path: color.id + ".png"});
+
+  window.close();
+  
+
+}
+
+</script>
+
+</head>
+
+<body>
+<center id="contaner" style="  -webkit-transition: -webkit-transform 300ms ease-in;">
+<div onmouseover="this.style.border='5px solid blue'" onmouseout="this.style.border='2px solid blue'" class="parnt" onclick="click(this)" id="probhat"><div class="icon"><img src="probhat.png"></div><div class="laytext">&#x9AA;&#x9CD;&#x9B0;&#x9AD;&#x9BE;&#x9A4;</div></div>
+<div onmouseover="this.style.border='5px solid blue'" onmouseout="this.style.border='2px solid blue'" class="parnt" onclick="click(this)" id="unijoy"><div class="icon"><img src="unijoy.png"></div><div class="laytext"></div>&#x987;&#x989;&#x9A8;&#x9BF;&#x99C;&#x9DF;</div>
+<div onmouseover="this.style.border='5px solid blue'" onmouseout="this.style.border='2px solid blue'" class="parnt" onclick="click(this)" id="phonetic"><div class="icon"><img src="phonetic.png"></div><div class="laytext"></div>&#x9AB;&#x9CB;&#x9A8;&#x9CB;&#x99F;&#x9BF;&#x995;</div>
+<div onmouseover="this.style.border='5px solid blue'" onmouseout="this.style.border='2px solid blue'" class="parnt" onclick="click(this)" id="eng"><div class="icon"><img src="eng.png"></div><div class="laytext">English</div></div>
+</center>
+
+<script>
+document.getElementsByTagName("body")[0].style.webkitTransform='rotate(270deg)';
+
+document.getElementById("contaner").style.webkitTransform='rotate(90deg)';</script>
+	
+</body>
+
+</html>
+
