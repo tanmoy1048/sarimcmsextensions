@@ -1,0 +1,13 @@
+#summary Bangla Keyboard Extension
+
+= Introduction =
+
+This Extension will add a bangla keyboard to your google chrome.
+
+= Details =
+
+After Installing the Extension you will see an icon in your chrome.
+Click this icon and you will be provided with a Layout Selection Window. 
+Click your desired layout and start writing.
+
+= Download =
