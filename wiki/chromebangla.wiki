@@ -12,5 +12,8 @@ Click your desired layout and start writing.
 
 = Download =
 
- <a href="http://sarimcmsextensions.googlecode.com/files/bnkeychrome.crx"> *Click Here To Install* </a>
+ <a href="http://sarimcmsextensions.googlecode.com/files/bnkeychrome1.2.3.crx"> *Click Here To Install* </a>
  
+
+== Thanks To,==
+ * Hasin Haydar for the jquery input engine.
