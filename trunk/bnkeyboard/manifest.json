@@ -1,0 +1,19 @@
+{
+  "name": "Bangla Keyboard",
+  "version": "1.2.3",
+  "permissions": [
+    "tabs", "http://*/*", "https://*/*"
+  ],
+  "browser_action": {
+      "default_title": "Set this page's Bangla Layout.",
+      "default_icon": "eng.png",
+      "popup": "popup.html"
+  },
+    "background_page": "background.html",
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["jquery.min.js","driver.phonetic.js","driver.probhat.js","driver.unijoy2.js","engine.js"]
+    }
+  ]
+}
