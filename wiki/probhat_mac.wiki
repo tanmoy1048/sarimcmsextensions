@@ -1,0 +1,23 @@
+#summary Probhat Bangla Writing Layout for Mac OSX
+
+= Introduction =
+
+This layout will enable users of Mac OSX to write bangla with probhat layout. 
+
+= Download =
+
+= Installation =
+
+# First Download the packed zip file.
+# Extract the contents of the zip file to Library/Keyboard Layouts folder in your home folder ( or in root if want a system wide installation)
+# Logout and Login Again
+# Goto System Preferences > Language and sources > Input Sources
+# Put Check mark beside "probhat"
+# Put Check mark beside "show input menu in menu bar"
+
+Now You have done the installation part. You can write bangla in any app by selecting probhat from top-right input menu.
+
+== Setting keyboard shortcut (Optional) ==
+If you want to setup a keyboard shortcut for changing layout,
+# Goto System Preferences > Keyboard And Mouse > Keyboard Shortcuts
+# In "Input Menu" Node select your favorite shortcut key double clicking over any node item.
