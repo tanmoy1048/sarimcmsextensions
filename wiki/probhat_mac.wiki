@@ -13,7 +13,7 @@ This layout will enable users of Mac OSX to write bangla with probhat layout.
  # First Download the packed zip file.
  # Extract the contents of the zip file to Library/Keyboard Layouts folder in your home folder ( or in root if want a system wide installation)
  # Logout and Login Again
- # Goto System Preferences > Language and sources > Input Sources
+ # Goto System Preferences > Language and Text > Input Sources
  # Put Check mark beside "probhat"
  # Put Check mark beside "show input menu in menu bar"
 
