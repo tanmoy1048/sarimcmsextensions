@@ -20,7 +20,7 @@
 #       Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
 #       MA 02110-1301, USA.
 
-import urllib2,urllib,shelve, sys
+import urllib,shelve, sys
 from BeautifulSoup import BeautifulSoup as BTS , Tag
 from os import environ
 from PyQt4.QtGui import QMainWindow, QApplication, QTableWidgetItem, QMessageBox, QWidget
@@ -73,13 +73,11 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         abtbox.setText('This app is for BanglaLion users. Just click the buttons and you will know about it by yourself ;)\n\nCreated By Sarim Khan\n\nsarim2005@gmail.com')
         abtbox.setWindowTitle('About')
         abtbox.show()
-    def show_err(self, msg):
-        abtbox = QMessageBox(self) 
-        abtbox.setText(msg)
-        abtbox.setWindowTitle('Error')
-        abtbox.show()
+
     def replyFinished(self, reply):
         try:
+            if (int(reply.error())) <> 0:
+                raise NameError(reply.errorString())
             ht = reply.readAll()
             soup = BTS(str(ht), convertEntities=BTS.HTML_ENTITIES)
             table =  soup.findAll('table')[14]        
