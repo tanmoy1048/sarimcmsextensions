@@ -20,11 +20,11 @@
 #       Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
 #       MA 02110-1301, USA.
 
-import urllib,shelve, sys
+import urllib, sys
 from BeautifulSoup import BeautifulSoup as BTS , Tag
 from os import environ
 from PyQt4.QtGui import QMainWindow, QApplication, QTableWidgetItem, QMessageBox, QWidget
-from PyQt4.QtCore import pyqtSignature, QString, QUrl, QByteArray
+from PyQt4.QtCore import pyqtSignature, QString, QUrl, QByteArray, QSettings
 from PyQt4.QtNetwork import QNetworkRequest, QNetworkAccessManager
 from Ui_bilai_form import Ui_MainWindow
 class MainWindow(QMainWindow, Ui_MainWindow):
@@ -44,28 +44,26 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.manager = QNetworkAccessManager()
         self.manager.finished.connect(self.replyFinished)
         self.manager.sslErrors.connect(self.n_error)
-
+        self.settings = QSettings('SarimKhan','BLionUsageV')
+        
         try:
             
-            db = shelve.open(environ['HOME'] + "/.blnset.conf", 'r')
-            self.txtUser.setText(db['username'])
-            self.txtPass.setText(db['password'])
-            self.txtFrom.setText(db['StartDate'])
-            self.txtTo.setText(db['EndDate'])
-            self.checkBox.setChecked(bool(db['checkb']))
-            db.close()
+            self.txtUser.setText(str(self.settings.value('username').toString()))
+            self.txtPass.setText(str(self.settings.value('password','123456').toString()))
+            self.txtFrom.setText(str(self.settings.value('StartDate').toString()))
+            self.txtTo.setText(str(self.settings.value('EndDate').toString()))
+            self.checkBox.setChecked(bool(self.settings.value('checkb',True).toBool()))
+            
         except:
-            print 'could not read from setting, maybe first time ?'
+            print (str(sys.exc_info()[1]))
 
     def save_st(self):
         try:
-            db = shelve.open(environ['HOME'] + "/.blnset.conf", 'n')
-            db['username'] = str(self.txtUser.text()).strip()
-            db['password'] = str(self.txtPass.text()).strip()
-            db['StartDate'] = str(self.txtFrom.text()).strip()
-            db['EndDate'] = str(self.txtTo.text()).strip()
-            db['checkb'] = int(self.checkBox.isChecked())
-            db.close()
+            self.settings.setValue('username', str(self.txtUser.text()).strip())
+            self.settings.setValue('password' ,  str(self.txtPass.text()).strip())
+            self.settings.setValue('StartDate' ,  str(self.txtFrom.text()).strip())
+            self.settings.setValue('EndDate' ,  str(self.txtTo.text()).strip())
+            self.settings.setValue('checkb' ,  int(self.checkBox.isChecked()))
         except:
             print 'could not write setting'
     def sh_abt(self):
