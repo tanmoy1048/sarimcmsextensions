@@ -1,0 +1,96 @@
+
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="bn_BD" lang="bn_BD" dir="ltr">
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<style>
+.stack { position: fixed; bottom: 28px; right: 40px; }
+.stack > img { position: relative; cursor: pointer; padding-top: 35px; z-index: 2; }
+.stack ul { list-style: none; position: absolute; top: 5px; cursor: pointer; z-index: 1; }
+.stack ul li { position: absolute; }
+.stack ul li img { border: 0; }
+.stack ul li span { display: none; }
+.stack .openStack li span {
+	font-family: "Lucida Grande", Lucida, Verdana, sans-serif;
+	display:block;
+	height: 14px;
+	position:absolute;
+	top: 17px;
+	right:60px;
+	line-height: 14px;
+	border: 0;
+	background-color:#000;
+	padding: 3px 10px;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	color: #fcfcfc;
+	text-align: center;
+	text-shadow: #000 1px 1px 1px;
+	opacity: .85;
+	filter: alpha(opacity = 85);
+}
+
+/* IE Fixes */
+.stack { _position: absolute; }
+.stack ul { _z-index:-1; _top:-15px; }
+.stack ul li { *right:5px; }
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript" ></script>
+<script type="text/javascript">
+$(function () {
+	// Stack initialize
+	var openspeed = 300;
+	var closespeed = 300;
+	$('.stack>img').toggle(function(){
+		var vertical = 0;
+		var horizontal = 0;
+		var $el=$(this);
+		$el.next().children().each(function(){
+			$(this).animate({top: '-' + vertical + 'px', left: horizontal + 'px'}, openspeed);
+			vertical = vertical + 55;
+			horizontal = (horizontal+.75)*2;
+		});
+		$el.next().animate({top: '-50px', left: '10px'}, openspeed).addClass('openStack')
+		   .find('li a>img').animate({width: '50px', marginLeft: '9px'}, openspeed);
+		$el.animate({paddingTop: '0'});
+	}, function(){
+		//reverse above
+		var $el=$(this);
+		$el.next().removeClass('openStack').children('li').animate({top: '55px', left: '-10px'}, closespeed);
+		$el.next().find('li a>img').animate({width: '79px', marginLeft: '0'}, closespeed);
+		$el.animate({paddingTop: '35'});
+	});
+
+	// Stacks additional animation
+	$('.stack li a').hover(function(){
+		$("img",this).animate({width: '56px'}, 100);
+		$("span",this).animate({marginRight: '30px'});
+	},function(){
+		$("img",this).animate({width: '50px'}, 100);
+		$("span",this).animate({marginRight: '0'});
+	});
+});
+</script>
+</head>
+<body>
+<div class="stack">
+	<img src="images/stack.png" alt="stack">
+<ul id="stack">
+<li><a href="#"><span>English</span><img src="images/keyboard.jpg" alt="Aperature"></a></li>
+<li><a href="#"><span>প্রভাত</span><img src="images/keyboard.jpg" alt="Photoshop"></a></li>
+<li><a href="#"><span>ইউনিজয়</span><img src="images/keyboard.jpg" alt="Safari"></a></li>
+<li><a href="#"><span>বিজয়</span><img src="images/keyboard.jpg" alt="Coda"></a></li>
+<li><a href="#"><span>ফোনোটিক</span><img src="images/keyboard.jpg" alt="Finder"></a></li>
+</ul>
+</div>
+
+
+</body>
+</html>
